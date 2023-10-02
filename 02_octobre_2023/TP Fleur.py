@@ -4,11 +4,13 @@
 ## Déclaration des classes
 
 class Fleur:
-    def __init__(self):
-        self.couleur = 'blanc'
-        self.taille = 20
-        self.nbr_petales = 10
-        self.nbr_feuilles = 0
+    couleurs_disponibles = ['blanc', 'rouge', 'jaune', 'bleu', 'rose', 'violet']
+    
+    def __init__(self, couleur='blanc', taille = 30, nbr_petales = 10, nbr_feuilles = 0):
+        self.couleur = couleur
+        self.taille = taille
+        self.nbr_petales = nbr_petales
+        self.nbr_feuilles = nbr_feuilles
         self.affiche_caracteristiques()
     
     #affichage variable
