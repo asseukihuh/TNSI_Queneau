@@ -1,68 +1,69 @@
+## Importation des modules
+
+
+## Déclaration des classes
+
 class Fleur:
-    couleurs_disponibles = ['blanc', 'rouge', 'jaune', 'bleu', 'rose', 'violet']
+    def __init__(self):
+        self.couleur = 'blanc'
+        self.taille = 20
+        self.nbr_petales = 10
+        self.nbr_feuilles = 0
+        self.affiche_caracteristiques()
     
-    def __init__(self, couleur='blanc', taille=20, nbr_petales=10, nbr_feuilles=0):
-        self.couleur = couleur
-        self.taille = taille
-        self.nbr_petales = nbr_petales
-        self.nbr_feuilles = nbr_feuilles
-    
+    #affichage variable
     def affiche_caracteristiques(self):
-        print(f"Couleur: {self.couleur}, Taille: {self.taille} cm, Pétales: {self.nbr_petales}, Feuilles: {self.nbr_feuilles}")
+        print(f"Couleur: {self.couleur},",
+        f"Taille: {self.taille},",
+        f"Nombres petales: {self.nbr_petales},",
+        f"Nombres feuilles: {self.nbr_feuilles}")
     
+    #calcul variable
     def ajoute_petale(self):
         self.nbr_petales += 1
     
+    #calcul variable
     def enleve_petale(self):
-        if self.nbr_petales > 0:
-            self.nbr_petales -= 1
+        self.nbr_petales -= 1
     
+    #multiplication variable
     def allonge(self, x):
-        if x >= 0:
-            self.taille += x
-        else:
-            print("Le paramètre doit être positif ou nul.")
+        assert x >= 0, "le paramètre doit être positif ou nul"
     
+    #multiplication variable
     def pousse(self):
-        self.taille *= 1.1
+        self.taille *= 1.10
     
+    #multiplication variable
     def est_fanee(self):
-        return self.nbr_petales == 0
-    
-    def couleurs_fleur(self):
-        couleurs = {couleur: getattr(self, 'couleur').count(couleur) for couleur in self.couleurs_disponibles}
-        total_apparitions = sum(couleurs.values())
-        taux_apparition = {couleur: count/total_apparitions for couleur, count in couleurs.items()}
-        return taux_apparition
+        if self.nbr_petales == 0:
+            return True
+        else:
+            return False
+        
 
-    def croisement(self, autre_fleur):
-        couleurs = [self.couleur, autre_fleur.couleur]
-        taille = (self.taille + autre_fleur.taille) / 2
-        nbr_petales = (self.nbr_petales + autre_fleur.nbr_petales) // 2
-        nbr_feuilles = (self.nbr_feuilles + autre_fleur.nbr_feuilles) // 2
-        return Fleur(couleurs, taille, nbr_petales, nbr_feuilles)
+## Déclaration des fonctions
 
 
-class Laboratoire_genetique:
-    def croisement(self, fleur1, fleur2):
-        couleurs = fleur1.couleurs + fleur2.couleurs
-        taille = (fleur1.taille + fleur2.taille) / 2
-        nbr_petales = (fleur1.nbr_petales + fleur2.nbr_petales) // 2
-        nbr_feuilles = (fleur1.nbr_feuilles + fleur2.nbr_feuilles) // 2
-        return Fleur(couleurs, taille, nbr_petales, nbr_feuilles)
+## Programme principal
+        
+fleur_1 = Fleur()
+fleur_2 = Fleur()
+fleur_3 = Fleur()
 
-    def croisement_bouquet(self, fleurs):
-        nouveaux = []
-        for i, fleur1 in enumerate(fleurs):
-            for fleur2 in fleurs[i+1:]:
-                nouveaux.append(self.croisement(fleur1, fleur2))
-        return nouveaux + fleurs
+fleur_2.couleur = 'rouge'
+fleur_2.nbr_petales = 8
+fleur_2.nbr_feuilles = 4
+fleur_2.taille = 25
 
-    def croisement_bouquet_generation(self, fleurs, n):
-        for _ in range(n):
-            fleurs = self.croisement_bouquet(fleurs)
-        return fleurs
+fleur_3.couleur = 'jaune'
+fleur_3.nbr_petales = 16
+fleur_3.nbr_feuilles = 8
+fleur_3.taille = 12
 
+bouquet = [fleur_1, fleur_2, fleur_3]
 
-fleur = Fleur()
-fleur.affiche_caracteristiques()
+for i in range(len(bouquet)):
+    print('Fleur n°', i + 1)
+    bouquet[i].affiche_caracteristiques()
+    print()    
