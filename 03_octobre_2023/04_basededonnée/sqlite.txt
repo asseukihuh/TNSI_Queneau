@@ -1,0 +1,38 @@
+SQLite version 3.33.0 2020-08-14 13:23:32
+Enter ".help" for usage hints.
+Connected to a transient in-memory database.
+Use ".open FILENAME" to reopen on a persistent database.
+sqlite> .tables
+sqlite> CREATE TABLE groupes_fournisseurs (
+   ...> id_groupe INTEGER PRIMARY KEY,
+   ...> nom_groupe TEXT NOT NULL
+   ...> );
+sqlite> .tables
+groupes_fournisseurs
+sqlite> .schema groupes_fournisseurs
+CREATE TABLE groupes_fournisseurs (
+id_groupe INTEGER PRIMARY KEY,
+nom_groupe TEXT NOT NULL
+);
+sqlite> CREATE TABLE fournisseurs (
+   ...>  id_fournisseur INTEGER PRIMARY KEY,
+   ...>  nom_fournisseur TEXT NOT NULL,
+   ...>  id_groupe INTEGER,
+   ...>  FOREIGN KEY (id_groupe)
+   ...>  REFERENCES groupes_fournisseurs (id_groupe)
+   ...> );
+sqlite> .schema
+CREATE TABLE groupes_fournisseurs (
+id_groupe INTEGER PRIMARY KEY,
+nom_groupe TEXT NOT NULL
+);
+CREATE TABLE fournisseurs (
+ id_fournisseur INTEGER PRIMARY KEY,
+ nom_fournisseur TEXT NOT NULL,
+ id_groupe INTEGER,
+ FOREIGN KEY (id_groupe)
+ REFERENCES groupes_fournisseurs (id_groupe)
+);
+sqlite>
+
+6 -> id_groupe qui veint de goupe_fournisseurs
