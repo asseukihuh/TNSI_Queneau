@@ -1,0 +1,41 @@
+I
+1) .open communes_nord.db
+2) .tables
+3) table = "ville"
+	values = "code"  TEXT,
+        	 "region"  TEXT,
+        	 "departement" TEXT,
+        	 "nom" TEXT,
+                 "coordonnees" TEXT,
+	primairy key = "code"
+   table = "evolution"
+	values = "code"  TEXT,
+        	 "categorie"  TEXT,
+        	 "genre"  TEXT,
+        	 "effectif"  INTEGER,
+	Primary key = jsp FOREIGN KEY = "code" REFERENCES = "ville"("code") 
+	
+4)PRAGMA foreign_keys = ON;
+
+II
+
+2) SELECT DISTINCT * FROM evolution WHERE categorie == 'Ouvriers';
+
+3) SELECT * FROM evolution WHERE categorie == 'Ouvriers';
+
+4) SELECT nom FROM ville WHERE code = 59350;
+
+5) SELECT code FROM ville WHERE nom = 'Caullery';
+   59140
+
+6) SELECT * FROM evolution WHERE code = 59350;
+
+7) SELECT * FROM evolution WHERE code = 59350 ORDER BY effectif DESC;
+
+8) SELECT code FROM evolution WHERE effectif > 2000;
+
+9) SELECT ville.nom FROM ville JOIN evolution ON evolution.code = ville.code WHERE effectif > 2000;
+
+10) SELECT COUNT(DISTINCT ville.nom FROM ville JOIN evolution ON evolution.code = ville.code WHERE effectif > 2000);
+
+11)  
