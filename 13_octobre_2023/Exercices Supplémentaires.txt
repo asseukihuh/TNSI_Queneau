@@ -1,0 +1,33 @@
+## 1 Exercice 1 : Loueur de voitures
+
+1. La relation Voitures :
+[X] comporte 3 attributs
+[ ] comporte 6 attributs
+2. Le domaine de l’attribut id_agence dans la relation Voitures est :
+[ ] Agences
+[X] les entiers naturels
+[ ] les chaînes de caractères
+[ ] Voitures
+3. Le schéma relationnel de la relation Agences est :
+[X] (id_agence, Ville, Département)
+[ ] (1, “Paris”, 75)
+[ ] ((id_agence, Entier ), (Ville, Chaine ), (Département, Chaine))
+[X] ((id_agence, Entier ), (Ville, Chaine ), (Département, Chaine))
+4. La relation Agences : 
+[ ] ne comporte pas de clé primaire
+[X] id_agence pour clé primaire
+[ ] Ville pour clé primaire
+[ ] Département pour clé primaire
+5. La relation Voitures:
+[ ] ne comporte pas de clé primaire
+[ ] comporte id_agence comme clé primaire
+[X] comporte id_voiture comme clé primaire
+[X] comporte id_agence comme clé étrangère
+6. La relation Agences :
+[X] est bien modélisée
+[ ] ne respecte pas les contraintes d’intégrité de relation
+[ ] présente des informations redondantes
+7. La relation Voitures :
+[ ] est bien modélisée
+[ ] ne respecte pas les contraintes d’intégrité référentielles
+[ ] présente des informations redondantes
