@@ -4,7 +4,7 @@
 ### 03 octobre -> 13 octobre : Chapitre 4 , Bases de données - Bases de données relationnelles
 ### 16 octobre -> ??? : Animation avec tkinter
 
-___________________________
+_______________________________________________________________________________________________
 
 ## Autre
 ### 17 octobre -> DS Programmation Objet (Partie Pratique)
