@@ -5,3 +5,6 @@
 ### 16 octobre -> ??? : Animation avec tkinter
 
 ___________________________
+
+## Autre
+### 17 octobre -> DS Programmation Objet (Partie Pratique)
