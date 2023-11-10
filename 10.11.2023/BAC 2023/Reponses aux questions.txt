@@ -1,0 +1,44 @@
+1)
+a)
+Les clés primaires sont id_prestation et id_client
+
+b)
+id_ client clé etr de id prestation
+
+c)
+chaines de caracteres
+
+2)
+a)
+Ouellet, 0475016031
+Foucault, 0475918885
+Croteau, 0475460794
+Rivard, 0475339127
+
+b)
+SELECT date, heure.debut
+FROM prestations
+WHERE duree > 1
+AND employe = 'Didier';
+
+3)
+Rouze
+Bonenfant
+Foucault
+Croteau 
+Rivard
+
+4)
+a)
+
+
+b)
+clients(id_client,adresse,code_postal,cille,telephone) id client > id client
+prestations(id_prestation,id_client,date,heure_debut,duree,type,employe) id prestations / type > type
+tarifs(type,tarif) type
+
+
+
+
+
+

@@ -1,0 +1,81 @@
+I. Avec un tableau
+
+1)
+t1 = [3, None]
+t2 = [6,[7, None]]
+
+2)
+t2[0][1] = 1
+
+3)
+t1[1] = t2
+
+4)
+print(id(t1))
+print(id(t2))
+print(id(t1[1]))
+L'adresse mémoire t1[1] est la meme que celle de [t2]
+
+5)
+t2[1][1] = [5, None]
+t2[1][1][1] = [11, None]
+
+6)
+t1 à été également modifié
+
+7)
+t3 = [1,[2,[3,[4, None]]]]
+
+II. Avec un objet
+
+1)
+class Maillon():
+    def __init__(self, valeur = None, suivant = None):
+        self.valeur = valeur
+        self.suivant = suivant
+
+2)
+a = Maillon(5)
+b = Maillon(7)
+
+3)
+print(id(a),hex(id(a)),bin(id(a)))
+print(id(b),hex(id(b)),bin(id(b)))
+
+4)
+print(m1.valeur)
+print(m2.valeur)
+
+5)
+m2.valeur = 9
+print(m2.valeur)
+
+6)
+l1 = m1
+
+7)
+l1.suivant = m2
+print(l1.suivant.valeur)
+
+8)
+m3 = Maillon(2)
+m4 = Maillon(11)
+l1.suivant.suivant = m3
+l1.suivant.suivant.suivant = m4
+print(l1.suivant.suivant.valeur, l1.suivant.suivant.suivant.valeur)
+
+9)
+l2 = Maillon(1, Maillon(2, Maillon(3, Maillon(4))))
+print(l2.valeur, l2.suivant.valeur, l2.suivant.suivant.valeur, 
+l2.suivant.suivant.suivant.valeur, l2.suivant.suivant.suivant.suivant)
+
+
+III;
+
+1) 
+Connaitre la structure de la liste, connaitre la prog objet ,
+savoir imbriquer les tableaux et c'est long et repetitif a écrire
+
+2)
+Utiliser l'interface de python et ses fonctions et l'utilisateur ne devra connaitre que l'interface
+
