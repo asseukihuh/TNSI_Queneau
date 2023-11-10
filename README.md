@@ -1,5 +1,7 @@
 # Ny-Harena RAKOTOVAO T3
 
+## Dates en format : Mois/Jour/Année
+
 # TNSI
 ## Chapitres par dates
 ### 02 octobre -> 02 octobre : Chapitre 3 , Structures de données - Programmation objet
