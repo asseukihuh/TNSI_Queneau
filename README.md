@@ -14,5 +14,5 @@ ________________________________________________________________________________
 ## Autre
 ### 17 octobre : DS Programmation Objet (Partie Pratique)
 ### 16 octobre -> 20 octobre : Projet : Animation avec tkinter
-### 13 ocobre, 06 novembre et 10 novembre : Exercices Supp (base de données)
+### 13 octobre, 06 novembre et 10 novembre : Exercices Supp (base de données)
 ### 10 novembre : Correction BAC 2023 ecrit (base de données)
