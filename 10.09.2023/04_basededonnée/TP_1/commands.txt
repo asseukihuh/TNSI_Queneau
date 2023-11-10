@@ -1,0 +1,21 @@
+SELECT * FROM ...; lister contenu table (* = Tout)
+
+INSERT INTO groupes_fournisseurs (id_groupe, nom_groupe) ajouter données dans 
+VALUES
+ (1, 'mécanique'),
+ (2, 'électronique'),
+ (3, 'optique');
+
+CREATE TABLE fournisseurs (		Créer table
+ id_fournisseur INTEGER PRIMARY KEY,
+ nom_fournisseur TEXT NOT NULL,
+ id_groupe INTEGER,
+ FOREIGN KEY (id_groupe)
+ REFERENCES groupes_fournisseurs (id_groupe)
+);
+
+CREATE TABLE groupes_fournisseurs ( 		Créer table
+id_groupe INTEGER PRIMARY KEY,
+nom_groupe TEXT NOT NULL
+);
+
