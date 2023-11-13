@@ -1,0 +1,69 @@
+1)
+class Liste_chainee():
+    def __init__(self):
+        self.tete = None
+
+m1 = Liste_chainee()
+
+2)
+def est_vide(self):
+        if self.tete == None:
+            return True
+        else:
+            return None
+
+3)
+def ajouter_element_queue(self, valeur):
+        if self.est_vide():
+            self.tete = Maillon(valeur)
+        else:
+            maillon = self.tete
+            while maillon.suivant != None:
+                maillon = maillon.suivant
+            maillon.suivant = Maillon(valeur)
+
+
+## On est obligé de parcourir toute la liste jusqu'au bout 
+car on ne connait que la tête
+
+4)
+def list(self):
+        a = []
+        if self.est_vide():
+            return a
+        else:
+            maillon = self.tete
+            a.append(maillon.valeur)
+            while maillon.suivant != None:
+                maillon = maillon.suivant
+                a.append(maillon.valeur)
+        return a
+
+5)
+en instanciant elle ne s'apelle pas list() mais l1.list()
+
+6)
+def longeur(self):
+        if self.est_vide():
+            return 0
+        else:
+            temp = 1
+            maillon = self.tete
+            while maillon.suivant != None:
+                maillon = maillon.suivant
+                temp += 1
+        return temp
+
+7)
+def extrait_element(self, position):
+        assert self.est_vide() != True, "LA LISTE EST VIDE !!!!!!!!!!!!!!!"
+        assert position <= self.longeur(), "LA VALEUR EST TROP GRANDE !!!!!!!"
+        if self.longeur() > 1:
+            temp = 1
+            maillon = self.tete
+            while maillon.suivant != None and temp != position:
+                maillon = maillon.suivant
+                temp += 1
+        return maillon.valeur
+
+
