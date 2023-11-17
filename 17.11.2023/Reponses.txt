@@ -1,0 +1,8 @@
+1)
+class Liste_chainee():
+    def __init__(self, tete = None):
+        self.tete = tete
+
+m1 = Liste_chainee()
+
+2)
