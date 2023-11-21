@@ -16,3 +16,4 @@
 ### 16 octobre -> 20 octobre : Projet : Animation avec tkinter
 ### 13 octobre, 06 novembre et 10 novembre : Exercices Supp (base de données)
 ### 10 novembre : Correction BAC 2023 ecrit (base de données)
+### 21 novembre : DS Pratique Python (Général)
