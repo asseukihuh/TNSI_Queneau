@@ -1,0 +1,16 @@
+from functools import reduce
+
+phrase = "La programmation fonctionnelle est un paradigme de programmation de type déclaratif qui considère le calcul en tant qu'évaluation de fonctions mathématiques."
+
+mots = phrase.split()
+
+def compter_occurrences_mot(mot):
+    return mot == 'fonction'
+
+occurrences_par_mot = list(map(compter_occurrences_mot, mots))
+
+print("Nombre d'occurrences du mot 'fonction' dans chaque mot de la phrase:", occurrences_par_mot)
+
+total_occurrences = reduce(lambda x, y: x + y, occurrences_par_mot)
+
+print("Nombre total d'occurrences du mot 'fonction':", total_occurrences)
