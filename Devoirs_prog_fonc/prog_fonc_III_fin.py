@@ -12,7 +12,7 @@ import functools
 ## Programme principal
 
 paragraphe = """
-En informatique, la programmation purement fonctionnelle est un paradigme de programmation — un style de construction de la structure et des éléments des programmes informatiques — qui considère toutes les opérations comme l'évaluation de fonctions mathématiques.
+En inforatique, la programmation purement fonctionnelle est un paradigme de programmation — un style de construction de la structure et des éléments des programmes informatiques — qui considère toutes les opérations comme l'évaluation de fonctions mathématiques.
 
 L'état et les objets immuables sont généralement modélisés à l'aide d'une logique temporelle, en tant que variables explicites représentant l'état du programme à chaque étape de son exécution : l'état d'une variable est transmis en tant que paramètre d'entrée d'une fonction de transformation d'état, qui renvoie l'état mis à jour en tant que partie de sa valeur de retour. Ce style gère les modifications d'état sans perdre la transparence référentielle des expressions du programme.
 
